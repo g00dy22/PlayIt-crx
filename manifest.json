@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "playit.js", "rpc.js" ]
+   },
+   "browser_action": {
+      "default_icon": "small-icon.png",
+      "default_title": "PlayIt on XBMC"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery-2.0.0.min.js", "sc-inject.js" ],
+      "matches": [ "https://*.soundcloud.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com 'unsafe-eval'; object-src 'self'",
+   "description": "PlayIt on XBMC sends selected URL to PlayIt service add-on installed on XBMC that resolves link to video and play/queue in player.",
+   "icons": {
+      "128": "Icon-128.png",
+      "16": "small-icon.png",
+      "256": "Icon-256.png",
+      "32": "Icon-32.png",
+      "48": "Icon-48.png",
+      "64": "Icon-64.png",
+      "96": "Icon-96.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBfUWaCAELxo/VEJEGNeuph5ign62q1W+6kDdKX9XUcxUwSv0H4TvXOUYHcBKwqTNvnneW6bdcYMkMATTV7Vkm7ERNt4cMZEmSIeC5YsDv/h2iA2iuBF4Fc1blxuCM88fP97Fw1WF2rtSHG7DJ+/aiokcPzltAGNd0aXDFOz7d+QIDAQAB",
+   "manifest_version": 2,
+   "name": "PlayIt on XBMC",
+   "options_page": "options.html",
+   "permissions": [ "http://*/PlayIt", "notifications", "tabs", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.7.0",
+   "web_accessible_resources": [ "Icon-64.png", "Icon-48.png" ]
+}
